@@ -1,3 +1,4 @@
+![Beautiful Commit Logo](https://i.imgur.com/AnyRfZf.png)
 # Beautiful Commit 🎨
 
 Beautiful Commit is a simple shell scipt based tool that help you to make beautiful git commit messages
