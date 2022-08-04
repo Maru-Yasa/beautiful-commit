@@ -21,7 +21,7 @@ showAllCommand(){
   
   printf "\n" 
   echo "📎Example:"
-  echo '👉 $ bmit add "hello world"'
+  echo '👉 $ bmit new "hello world"'
 }
 
 declare -A emt
