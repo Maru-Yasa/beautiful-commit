@@ -4,7 +4,7 @@ install(){
   cd ./.bmit
   curl --silent https://raw.githubusercontent.com/Maru-Yasa/beautiful-commit/main/bin/bmit -o ./bin/bmit
   eval sudo chmod u+x ./bin/bmit && sudo ln ./bin/bmit  /usr/bin/bmit
-  printf "[🤖] You are redy to make beautiful commit 🎨, try 'bmit help'"
+  echo "[🤖] You are redy to make beautiful commit 🎨, try 'bmit help'"
 }
 
 printf "[🤖] Are you ready?, this installer will install 'Beautiful Commit' to current working directory and make folder '.bmit', continue to install? (y/n)? "
@@ -12,16 +12,16 @@ read yesornot
 
 case $yesornot in
   y)
-    printf "[🤖] Okay then, I'll install it \n"
+    echo"[🤖] Okay then, I'll install it"
     install
     exit 0
   ;;
   n)
-    printf "[🤖] Emmm okay, comeback later ya"
+    echo "[🤖] Emmm okay, comeback later ya"
     exit 0
   ;;
   *)
-    printf "[🤖] I don't understand, please chose (y/n)"
+    echo "[🤖] I don't understand, please chose (y/n)"
     exit 1
   ;;
 esac
