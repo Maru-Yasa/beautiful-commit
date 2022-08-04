@@ -25,15 +25,15 @@ showAllCommand(){
 }
 
 declare -A emt
-emt['new']='✨NEW:'
-emt['fix']='🛠FIX:'
-emt['update']='🔨UPDATE:'
-emt['doc']='📝DOC:'
-emt['merge']='🔀MERGE:'
-emt['down']='⏬DOWN:'
-emt['up']='⏫UP:'
-emt['package']='📦PACKAGE:'
-emt['working']='🚧WORKING:'
+emt['new']='✨ NEW:'
+emt['fix']='🛠 FIX:'
+emt['update']='🔨 UPDATE:'
+emt['doc']='📝 DOC:'
+emt['merge']='🔀 MERGE:'
+emt['down']='⏬ DOWN:'
+emt['up']='⏫ UP:'
+emt['package']='📦 PACKAGE:'
+emt['working']='🚧 WORKING:'
 
 #check aditional comand
 case $1 in
