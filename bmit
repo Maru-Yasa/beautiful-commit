@@ -1,0 +1,54 @@
+#! /bin/bash
+
+commit(){
+  echo "[🤖] $1 $2"
+  eval git commit -m \"$1 $2\"
+}
+
+showAllCommand(){
+  echo "==================="
+  echo "✨ Avaible Emoji ✨"
+  echo "==================="
+  echo ""
+  declare -i index=1
+  for i in "${!emt[@]}"
+  do
+    key=$i
+    value=${emt[$key]}
+    echo "${index}.${key} => ${value}"
+    index+=1
+  done
+  
+  printf "\n" 
+  echo "📎Example:"
+  echo '👉 $ bmit add "hello world"'
+}
+
+declare -A emt
+emt['new']='✨NEW:'
+emt['fix']='🛠FIX:'
+emt['update']='🔨UPDATE:'
+emt['doc']='📝DOC:'
+emt['merge']='🔀MERGE:'
+emt['down']='⏬DOWN:'
+emt['up']='⏫UP:'
+emt['package']='📦PACKAGE:'
+emt['working']='🚧WORKING:'
+
+#check aditional comand
+case $1 in
+  help)
+    showAllCommand
+    exit 0
+  ;;
+esac 
+
+# check if command is availeble in $emt
+if [ -v emt["$1"] ]; then
+  commit ${emt["$1"]} "$2"
+  exit 0
+else
+  echo "[🤖] error, command $1 not found, try to use '$ bmit help'"
+  exit 1
+fi
+
