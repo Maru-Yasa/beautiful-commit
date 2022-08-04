@@ -2,7 +2,7 @@ install(){
   mkdir .bmit
   mkdir .bmit/bin
   cd ./.bmit
-  curl --silent https://raw.githubusercontent.com/Maru-Yasa/beautiful-commit/main/bmit -o ./bin/bmit
+  curl --silent https://raw.githubusercontent.com/Maru-Yasa/beautiful-commit/main/bin/bmit -o ./bin/bmit
   eval sudo chmod u+x ./bin/bmit && sudo ln ./bin/bmit  /usr/bin/bmit
   printf "[🤖] You are redy to make beautiful commit 🎨, try 'bmit help'"
 }
