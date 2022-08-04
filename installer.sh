@@ -1,4 +1,5 @@
 install(){
+  cd $HOME
   mkdir .bmit
   mkdir .bmit/bin
   cd ./.bmit
@@ -7,12 +8,12 @@ install(){
   echo "[🤖] You are redy to make beautiful commit 🎨, try 'bmit help'"
 }
 
-printf "[🤖] Are you ready?, this installer will install 'Beautiful Commit' to current working directory and make folder '.bmit', continue to install? (y/n)? "
+echo "[🤖] Are you ready?, this installer will install 'Beautiful Commit' to $HOME/.bmit , continue to install? (y/n)? "
 read yesornot
 
 case $yesornot in
   y)
-    echo"[🤖] Okay then, I'll install it"
+    echo "[🤖] Okay then, I'll install it"
     install
     exit 0
   ;;
