@@ -1,8 +1,8 @@
 #! /bin/bash
 
 commit(){
-  echo "[🤖] $1 $2"
-  eval git commit -m \"$1 $2\"
+  echo "$1"
+  eval git commit -m \"$1\"
 }
 
 showAllCommand(){
@@ -45,7 +45,8 @@ esac
 
 # check if command is availeble in $emt
 if [ -v emt["$1"] ]; then
-  commit ${emt["$1"]} "$2"
+  msg=$2
+  commit "${emt[$1]} $msg"
   exit 0
 else
   echo "[🤖] error, command $1 not found, try to use '$ bmit help'"
